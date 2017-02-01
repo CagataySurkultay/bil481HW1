@@ -37,7 +37,7 @@ public class AppTest
         assertTrue( true );
     }
 
-public void testFound() {
+    public void testFound() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
       assertTrue(new App().search(array, 4, 4));
     }
@@ -54,6 +54,15 @@ public void testFound() {
 
     public void testNull() {
       assertFalse(new App().search(null, 5, 5));
+    }
+
+    public void oneNegative(){
+	ArrayList<Integer> array = new ArrayList<>(Arrays.asList(23,69,31,-81));
+	assertTrue(new App().search(array, -81, 1));
+    }
+    public void twoNegatives(){
+	ArrayList<Integer> array = new ArrayList<>(Arrays.asList(23,1,66,90));
+	assertTrue(new App().search(array, -9, -9));
     }
 
 
